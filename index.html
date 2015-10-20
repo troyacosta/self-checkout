@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Self Checkout Calculator</title>
+	</head>
+	<body>
+		<form>
+			<label>Item</label>
+			<input id="itemInput" type="text" placeholder="item">
+			<label>Quantity</label>
+			<input id="quantityInput" type="number" placeholder="qauntity">
+			<label>Price</label>
+			<input id="priceInput" type="number" step=".01" placeholder="$">
+			<button>Add To Cart</button>
+		</form>
+		<ul id="itemList">
+		</ul>
+		<div id="subTotal">Subtotal: $</div>
+		<button id="checkOut">Check Out</button>
+		<div id="finalTotal"></div>
+		<script type="text/javascript" src="scripts/bundle.js"></script>
+	</body>
+</html>
