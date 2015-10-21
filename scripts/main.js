@@ -6,6 +6,7 @@ var priceInput = document.getElementById('priceInput');
 var form = document.querySelector('form');
 var itemList = document.getElementById('itemList');
 var subTotal = document.getElementById('subTotal');
+var taxTotal = document.getElementById('taxTotal');
 var finalTotal = document.getElementById('finalTotal');
 var checkOut = document.getElementById('checkOut');
 var calculatedSubTotal = null;
@@ -21,6 +22,8 @@ form.addEventListener('submit', function(e) {
 	priceInput.value = '';
 })
 checkOut.addEventListener('click', function() {
-	var total = (calculatedSubTotal * .055) + calculatedSubTotal;
-	finalTotal.innerHTML = 'Total with tax = $ '+total.toFixed(2);
+	var tax = calculatedSubTotal * .055;
+	var total = tax + calculatedSubTotal;
+	taxTotal.innerHTML = 'Tax total = $' + tax.toFixed(2);
+	finalTotal.innerHTML = 'Total with tax = $' + total.toFixed(2);
 })
